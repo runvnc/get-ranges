@@ -5,7 +5,7 @@ From this stackoverflow.com question:
 
 http://stackoverflow.com/questions/2270910/how-to-convert-sequence-of-numbers-in-an-array-to-range-of-numbers
 
-This is CMS's answer.  
+This is CMS's answer, except negative numbers are in parenthesis.
 **NOTE: you may need to sort the array beforehand.**  One way is `npm i --save sort-numbers` then 
 `require('sort-numbers')(array);`
 

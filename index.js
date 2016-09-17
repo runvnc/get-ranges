@@ -1,3 +1,9 @@
+function negativeInParens(num) {
+  if (num < 0) return '('+num+')'; else return num;
+}
+
+neg = negativeInParens;
+
 function getRanges(array) {
   var ranges = [], rstart, rend;
   for (var i = 0; i < array.length; i++) {
@@ -7,7 +13,8 @@ function getRanges(array) {
       rend = array[i + 1]; // increment the index if the numbers sequential
       i++;
     }
-    ranges.push(rstart == rend ? rstart+'' : rstart + '-' + rend);
+
+    ranges.push(rstart == rend ? neg(rstart)+'' : neg(rstart) + '-' + neg(rend));
   }
   return ranges;
 }
