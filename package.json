@@ -1,0 +1,14 @@
+{
+  "name": "get-ranges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sort-numbers": "^1.0.3"
+  }
+}
