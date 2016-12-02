@@ -4,7 +4,7 @@ function negativeInParens(num) {
 
 neg = negativeInParens;
 
-function getRanges(array) {
+function getRanges(array, opts) {
   var ranges = [], rstart, rend;
   for (var i = 0; i < array.length; i++) {
     rstart = array[i];
@@ -13,8 +13,10 @@ function getRanges(array) {
       rend = array[i + 1]; // increment the index if the numbers sequential
       i++;
     }
-
-    ranges.push(rstart == rend ? neg(rstart)+'' : neg(rstart) + '-' + neg(rend));
+    if (opts && opts.array)
+      ranges.push(rstart == rend ? rstart : [rstart, rend]);
+    else
+      ranges.push(rstart == rend ? neg(rstart)+'' : neg(rstart) + '-' + neg(rend));
   }
   return ranges;
 }

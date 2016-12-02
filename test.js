@@ -11,5 +11,9 @@ assert.deepEqual(needSort, [1,2,3,4,5,6,7,8,9,10]);
 
 assert.deepEqual(getRanges([-3,-2,-1,0,1,3,4,5]),['(-3)-1','3-5']);
 
+assert.deepEqual(getRanges([-3,-2,-1,0,1,3,4,5],{array:true}),[[-3,1],[3,5]]);
+
+assert.deepEqual(getRanges([2,3,4,5,10,18,19,20],{array:true}),[[2,5],10,[18,20]]);
+
 console.log('Done.');
 

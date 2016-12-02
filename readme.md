@@ -14,3 +14,11 @@ var getRanges = require('get-ranges');
 getRanges([2,3,4,5,10,18,19,20]);
 // returns ["2-5", "10", "18-20"]
 ```
+
+To return an array of numeric ranges instead of strings describing ranges:
+
+```javascript
+var getRanges = require('get-ranges');
+getRanges([2,3,4,5,10,18,19,20],{array:true});
+// returns [[2,5], 10, [18,20]]
+```
