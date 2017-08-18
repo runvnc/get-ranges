@@ -2,7 +2,7 @@ function negativeInParens(num) {
   if (num < 0) return '('+num+')'; else return num;
 }
 
-neg = negativeInParens;
+var neg = negativeInParens;
 
 function getRanges(array, opts) {
   var ranges = [], rstart, rend;
